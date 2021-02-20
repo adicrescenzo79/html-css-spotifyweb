@@ -1,0 +1,62 @@
+.debug header,
+.debug footer{
+  background-color: red;
+}
+
+.debug main{
+  background-color: yellow;
+}
+
+.debug .disco{
+  background-color: purple;
+}
+
+aside{
+  background-color: blue;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header,
+footer{
+  height: 75px;
+}
+
+#central{
+  display: flex;
+}
+
+main,
+aside{
+  height: calc(100vh - 150px);
+
+}
+
+main{
+  overflow-y: auto;
+  width: calc(100vw - 200px);
+}
+
+aside{
+  width: 200px;
+}
+
+.dischi{
+  margin: 0 auto;
+
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: flex-start;
+}
+
+.disco{
+  height: 200px;
+  margin: 10px;
+
+  flex-shrink: 1;
+  flex-basis: 200px;
+}
