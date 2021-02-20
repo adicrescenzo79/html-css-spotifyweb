@@ -13,10 +13,17 @@
 
 .debug .disco{
   background-color: purple;
+  height: 300px;
 }
 
 .debug aside{
   background-color: blue;
+}
+
+.debug header #upgrade{
+  height: 50px;
+  width: 200px;
+  background-color: green;
 }
 
 .row{
@@ -49,21 +56,25 @@ main{
   height: calc(100vh - 100px);
 }
 
+header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 #central{
   overflow-y: auto;
   height: calc(100vh - 200px);
 }
 
-#central
-.dischi{
+#central .dischi{
   margin: 0 auto;
 
   display: flex;
   justify-content: space-around;
-  }
+}
 
-.disco{
-  height: 200px;
+#central .disco{
   margin: 10px;
 
   flex-shrink: 1;
