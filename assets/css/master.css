@@ -1,9 +1,13 @@
-.debug header,
-.debug footer{
+.debug header{
   background-color: red;
 }
 
-.debug main{
+.debug footer{
+  background-color: green;
+
+}
+
+.debug #central{
   background-color: yellow;
 }
 
@@ -11,47 +15,52 @@
   background-color: purple;
 }
 
-aside{
+.debug aside{
   background-color: blue;
 }
 
-*{
+.row{
   margin: 0;
+}
+
+[class*="col-"]{
   padding: 0;
-  box-sizing: border-box;
 }
 
-header,
-footer{
-  height: 75px;
-}
-
-#central{
+#up{
   display: flex;
 }
 
-main,
-aside{
-  height: calc(100vh - 150px);
-
-}
-
 main{
-  overflow-y: auto;
   width: calc(100vw - 200px);
 }
 
 aside{
   width: 200px;
+  height: calc(100vh - 100px);
 }
 
+header,
+footer{
+  height: 100px;
+}
+
+main{
+  height: calc(100vh - 100px);
+}
+
+#central{
+  overflow-y: auto;
+  height: calc(100vh - 200px);
+}
+
+#central
 .dischi{
   margin: 0 auto;
 
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: flex-start;
-}
+  justify-content: space-around;
+  }
 
 .disco{
   height: 200px;
@@ -59,4 +68,15 @@ aside{
 
   flex-shrink: 1;
   flex-basis: 200px;
+}
+
+@media all and (max-width: 767px){
+  aside{
+    width: 50px;
+  }
+
+  main{
+    width: calc(100vw - 50px);
+  }
+
 }
