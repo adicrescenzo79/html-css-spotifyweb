@@ -26,6 +26,16 @@
   background-color: green;
 }
 
+/* comuni */
+*{
+  color: #fff;
+  text-decoration: none;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
 .row{
   margin: 0;
 }
@@ -65,8 +75,11 @@ header{
 #central{
   overflow-y: auto;
   height: calc(100vh - 200px);
+  background-color: #141922;
 }
 
+#central nav{
+}
 #central .dischi{
   margin: 0 auto;
 
@@ -79,6 +92,13 @@ header{
 
   flex-shrink: 1;
   flex-basis: 200px;
+}
+
+#central img{
+  width: 100%;
+}
+#central #popolari img{
+  border-radius: 50%;
 }
 
 @media all and (max-width: 767px){
