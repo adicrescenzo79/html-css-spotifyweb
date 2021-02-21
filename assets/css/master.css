@@ -27,9 +27,25 @@
 }
 
 /* comuni */
+body{
+  font-size: 14px;
+  font-weight: 600;
+}
+
 *{
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:focus,
+a:active{
+  border: none;
+  outline-style: none;
 }
 
 .text-uppercase{
@@ -79,7 +95,32 @@ header{
 }
 
 #central nav{
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
 }
+
+#central nav a{
+  padding: 0 20px;
+}
+
+#central nav a:after{
+  content: '';
+  width: 25px;
+  border: 1px solid #141922;
+  display: block;
+  margin: 2px auto 0;
+  text-align: center;
+}
+
+#central nav a:focus:after,
+#central nav a:active:after{
+  border-color: #ADFF2F;
+}
+
 #central .dischi{
   margin: 0 auto;
 
@@ -97,8 +138,15 @@ header{
 #central img{
   width: 100%;
 }
+
 #central #popolari img{
   border-radius: 50%;
+}
+
+@media all and (max-width: 1199px){
+}
+
+@media all and (max-width: 991px){
 }
 
 @media all and (max-width: 767px){
