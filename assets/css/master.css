@@ -52,6 +52,9 @@ a:active{
   text-transform: uppercase;
 }
 
+span{
+  margin-top: 10px;
+}
 .row{
   margin: 0;
 }
@@ -95,7 +98,7 @@ header{
 }
 
 #central nav{
-  height: 100px;
+  height: 75px;
 
   display: flex;
   justify-content: center;
@@ -121,8 +124,20 @@ header{
   border-color: #ADFF2F;
 }
 
+#central .sector{
+  margin-left: 17px;
+}
+
+#central .sector h2{
+  color: #fff;
+}
+
+#central .sector h2 + span{
+  font-size: 11px;
+}
+
 #central .dischi{
-  margin: 0 auto;
+  margin: 10px auto;
 
   display: flex;
   justify-content: space-around;
@@ -130,25 +145,82 @@ header{
 
 #central .disco{
   margin: 10px;
+  text-align: center;
 
   flex-shrink: 1;
-  flex-basis: 200px;
+  flex-basis: 175px;
 }
 
 #central img{
   width: 100%;
 }
 
+#central .play{
+  position: relative;
+}
+
+#central .middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: none;
+}
+
+#central .disco:hover{
+  cursor: pointer;
+}
+
+#central .disco:hover img{
+  opacity: 0.5;
+}
+
+#central .disco:hover .middle{
+  display: block;
+}
+
+#central i{
+  font-size: 60px;
+  color: #fff;
+}
+
+#central .title{
+  display: block;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+#central .subtitle{
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
 #central #popolari img{
   border-radius: 50%;
 }
 
+/* md */
 @media all and (max-width: 1199px){
+  [class*="col-"]{
+    height: 278px;
+  }
+
 }
 
+/* sm */
 @media all and (max-width: 991px){
+  [class*="col-"]{
+    height: auto;
+  }
+
+  #central nav{
+    height: 100px;
+  }
+
 }
 
+/* xs */
 @media all and (max-width: 767px){
   aside{
     width: 50px;
