@@ -85,12 +85,15 @@ aside{
   height: calc(100vh - 100px);
   background-color: #000;
   font-size: 11px;
-  z-index: 1;
-  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-aside *{
-  z-index: 1;
+aside .top{
+  overflow-y: hidden;
+  /* max-height: calc(100vh - 100 - 91); */
 }
 
 aside img.big{
@@ -98,7 +101,7 @@ aside img.big{
   padding: 30px 0;
 }
 
-aside img.small{
+.fa-spotify{
   display: none;
 }
 
@@ -138,13 +141,17 @@ aside .home{
 aside .playlist{
   display: flex;
   overflow-y: auto;
-  height: 300px;
+  max-height: 300px;
+  height: calc(100vh - 403px);
   padding-top: 20px;
 
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
+aside .playlist > *{
+  margin-bottom: 5px;
+}
 aside .playlist span:first-child{
   color: #fff;
 }
@@ -176,9 +183,11 @@ aside span{
 
 aside .bottom{
   padding-bottom: 10px;
-  position: absolute;
-  bottom: 0;
-  z-index: 5
+  height: 91px;
+  position: fixed;
+  bottom: 100px;
+  background-color: #000;
+  width: 200px;
 }
 
 aside .bottom .linea{
@@ -351,6 +360,9 @@ header{
 footer{
   background-color: #282828;
   z-index: 200;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
 
 /* md */
@@ -377,6 +389,36 @@ footer{
 @media all and (max-width: 767px){
   aside{
     width: 50px;
+  }
+
+  aside img.big,
+  aside span,
+  aside .playlist,
+  aside .linea{
+    display: none;
+  }
+
+  aside .fa-spotify{
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    padding: 15px;
+  }
+
+  aside span{
+    display: none;
+  }
+
+  aside .playlist{
+    display: none;
+  }
+
+  aside .bottom{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
   }
 
   main{
