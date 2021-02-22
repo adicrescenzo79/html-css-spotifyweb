@@ -74,6 +74,15 @@ main{
 aside{
   width: 200px;
   height: calc(100vh - 100px);
+  background-color: #000;
+  font-size: 11px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+aside img.small{
+  display: none;
 }
 
 header,
@@ -86,7 +95,10 @@ main{
 }
 
 header{
-  background-color: #080B12;
+  background-color: rgba(8, 11, 18, 0.5);
+  position: fixed;
+  width: calc(100vw - 200px);
+  z-index: 100;
 
   display: flex;
   justify-content: flex-end;
@@ -109,8 +121,9 @@ header{
 
 
 #central{
+  padding-top: 100px;
   overflow-y: auto;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 100px);
   background-color: #141922;
 }
 
@@ -247,4 +260,7 @@ header{
     width: calc(100vw - 50px);
   }
 
+  header{
+    width: calc(100vw - 50px);
+  }
 }
