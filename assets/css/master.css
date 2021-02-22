@@ -86,10 +86,27 @@ main{
 }
 
 header{
+  background-color: #080B12;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
+#upgrade{
+  color: #fff;
+  margin-right: 20px;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#upgrade:hover{
+  margin-right: 0px;
+  font-size: 17px;
+}
+
 
 #central{
   overflow-y: auto;
