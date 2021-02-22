@@ -30,13 +30,19 @@
 body{
   font-size: 14px;
   font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+
 }
 
 *{
-  color: rgba(255, 255, 255, 0.5);
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
 }
+
+a{
+  color: rgba(255, 255, 255, 0.5);
+}
+
 
 a:hover{
   color: #fff;
@@ -52,9 +58,14 @@ a:active{
   text-transform: uppercase;
 }
 
+.text-capitalize{
+  text-transform: capitalize;
+}
+
 span{
   margin-top: 10px;
 }
+
 .row{
   margin: 0;
 }
@@ -76,14 +87,79 @@ aside{
   height: calc(100vh - 100px);
   background-color: #000;
   font-size: 11px;
+}
 
-  display: flex;
-  flex-direction: column;
+aside img.big{
+  width: 70%;
+  padding: 30px 0;
 }
 
 aside img.small{
   display: none;
 }
+
+aside .menu{
+  display: flex;
+  flex-direction: column;
+}
+
+aside .menu a{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+aside a{
+  cursor: pointer;
+  padding: 5px;
+}
+
+aside img.big,
+aside a,
+aside .playlist span{
+  padding-left: 15px;
+}
+
+aside a:hover{
+  color: #fff;
+}
+
+aside a:active,
+aside a:focus,
+aside .home{
+  border-left: 2px solid #ADFF2F;
+}
+
+
+aside .playlist{
+  display: flex;
+  overflow-y: auto;
+  height: 300px;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside .playlist span:first-child{
+  color: #fff;
+}
+
+aside .playlist a{
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+aside .playlist a span{
+  font-size: 14px;
+
+}
+
+aside .playlist a i{
+  font-size: 37px;
+}
+
+
 
 header,
 footer{
@@ -150,7 +226,8 @@ header{
 }
 
 #central nav a:focus:after,
-#central nav a:active:after{
+#central nav a:active:after,
+#central nav a.selected:after{
   border-color: #ADFF2F;
 }
 
