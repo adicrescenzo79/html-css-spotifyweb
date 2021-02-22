@@ -42,8 +42,7 @@ body{
 a{
   color: rgba(255, 255, 255, 0.5);
 }
-
-
+.
 a:hover{
   color: #fff;
 }
@@ -54,6 +53,9 @@ a:active{
   outline-style: none;
 }
 
+.white{
+  color: #fff;
+}
 .text-uppercase{
   text-transform: uppercase;
 }
@@ -62,9 +64,6 @@ a:active{
   text-transform: capitalize;
 }
 
-span{
-  margin-top: 10px;
-}
 
 .row{
   margin: 0;
@@ -87,6 +86,10 @@ aside{
   height: calc(100vh - 100px);
   background-color: #000;
   font-size: 11px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 aside img.big{
@@ -135,6 +138,7 @@ aside .playlist{
   display: flex;
   overflow-y: auto;
   height: 300px;
+  padding-top: 20px;
 
   flex-direction: column;
   justify-content: space-between;
@@ -147,19 +151,44 @@ aside .playlist span:first-child{
 aside .playlist a{
   display: flex;
   justify-content: flex-start;
-  align-content: center;
+  align-items: center;
 }
 
 aside .playlist a span{
   font-size: 14px;
-
 }
 
 aside .playlist a i{
   font-size: 37px;
 }
 
+aside .install,
+aside .profile{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+aside span{
+  padding-left: 15px;
+}
+
+aside .bottom .linea{
+  width: 170px;
+  margin: 15px auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+aside a.profile i{
+  font-size: 37px;
+  color: #fff;
+  background-color: #808080;
+  border-radius: 50%;
+}
+
+aside .profile span{
+  font-size: 14px;
+}
 
 header,
 footer{
@@ -298,6 +327,10 @@ header{
   text-transform: capitalize;
 }
 
+#central span{
+  margin-top: 10px;
+}
+
 #central .subtitle{
   font-size: 11px;
   text-transform: capitalize;
@@ -305,6 +338,10 @@ header{
 
 #central #popolari img{
   border-radius: 50%;
+}
+
+footer{
+  background-color: #282828;
 }
 
 /* md */
