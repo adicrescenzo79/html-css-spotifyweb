@@ -26,6 +26,12 @@
   background-color: green;
 }
 
+.debug footer *{
+  background-color: cyan;
+  border: 1px solid black;
+  height: 50%;
+  width: 200px;
+}
 /* comuni */
 body{
   font-size: 14px;
@@ -55,6 +61,7 @@ a:active{
 .white{
   color: #fff;
 }
+
 .text-uppercase{
   text-transform: uppercase;
 }
@@ -101,7 +108,7 @@ aside img.big{
   padding: 30px 0;
 }
 
-.fa-spotify{
+aside .fa-spotify{
   display: none;
 }
 
@@ -184,8 +191,8 @@ aside span{
 aside .bottom{
   padding-bottom: 10px;
   height: 91px;
-  position: fixed;
-  bottom: 100px;
+  /* position: fixed;
+  bottom: 100px; */
   background-color: #000;
   width: 200px;
 }
@@ -260,6 +267,10 @@ header{
 
 #central nav a{
   padding: 0 20px;
+}
+
+#central nav a:hover{
+  color: #fff;
 }
 
 #central nav a:after{
@@ -363,6 +374,63 @@ footer{
   position: fixed;
   bottom: 0;
   width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a:hover{
+  color: #fff;
+}
+
+footer span{
+  font-size: 11px;
+  padding-left: 5px;
+}
+
+footer .song,
+footer .vol{
+  width: 200px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .song img{
+  height: 50px;
+}
+ footer .song i{
+   padding-left: 5px;
+ }
+footer .song .cover{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .song .cover .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .song .cover .info span:last-of-type:hover{
+  text-decoration: underline;
+}
+
+footer .song .cover .like{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer input::-webkit-slider-thumb{
+  background-color: #fff;
+}
+
+footer .vol{
+  font-size: 11px;
 }
 
 /* md */
