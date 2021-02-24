@@ -244,7 +244,7 @@ header{
 }
 
 #upgrade:hover{
-  margin-right: 0px;
+  margin-right: 20px;
   font-size: 17px;
 }
 
@@ -433,7 +433,7 @@ footer .player{
   height: 70%;
   min-width: 206px;
   flex-shrink: 1;
-  flex-basis: 400px;
+  flex-basis: 500px;
 
   display: flex;
   flex-direction: column;
@@ -444,6 +444,7 @@ footer .player .commands{
   font-size: 12px;
   width: 206px;
   align-self: center;
+  position: relative;
 
   display: flex;
   justify-content: space-between;
@@ -456,12 +457,62 @@ footer .player .commands a{
 
 footer .player .commands .play{
   font-size: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-70%);
+}
+
+footer .player .commands .play:hover{
+  font-size: 27px;
 }
 
 footer .player .duration{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer .player .duration,
+footer .vol .range{
+  cursor: pointer;
+}
+
+footer  .bar {
+  width: 100%;
+  margin: 0 10px;
+  position: relative;
+
+  display: flex;
+}
+
+footer  .bar .bar-left{
+  width: 20%;
+  border: 2px solid #C1C1C1;
+  border-radius: 20px;
+}
+
+footer .player .duration:hover .bar .bar-left,
+footer .vol .range:hover .bar .bar-left{
+  border: 2px solid #ADFF2F;
+
+}
+
+footer .bar .bar-right{
+  width: 80%;
+  border: 2px solid #5A5A5A;
+  border-radius: 0 20px 20px 0;
+}
+
+footer .player .duration:hover .bar .ball,
+footer .vol .range:hover .bar .ball{
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20%;
+  transform: translateX(-50%);
+  bottom: -5px;
 }
 
 /* range */
@@ -513,7 +564,7 @@ input[type=range]::-moz-range-track {
   height: 4.7px;
   cursor: pointer;
 }
-input[type=range]::-moz-range-thumb {
+input[type=range]:hover::-moz-range-thumb {
   width: 15px;
   height: 15px;
   background: #ffffff;
@@ -556,6 +607,8 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #838383;
 }
+
+
 /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
 how to remove the virtical space around the range input in IE*/
 @supports (-ms-ime-align:auto) {
@@ -570,9 +623,18 @@ how to remove the virtical space around the range input in IE*/
 
 footer .vol{
   font-size: 11px;
+  padding-right: 20px;
 
   display: flex;
   justify-content: flex-end;
+}
+
+footer .vol .range{
+  width: 50%;
+}
+
+footer .vol .range{
+  width: 90px;
 }
 
 footer .vol > a{
@@ -650,8 +712,14 @@ footer .vol input[type=range] {
     width: calc(100vw - 50px);
   }
 
-  footer .player{
+  /* footer .player{
     width: 206px;
+  } */
+
+  footer .player .duration{
+    padding-top: 30px;
+    width: 88%;
+    margin: 0 auto;
   }
 
   footer .player input[type=range] {

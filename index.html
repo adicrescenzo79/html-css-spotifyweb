@@ -246,15 +246,24 @@
 
       <div class="player">
         <div class="commands white">
-          <a class="white" href=""><i class="fas fa-random"></i></a>
-          <a class="white" href=""><i class="fas fa-step-backward"></i></a>
+          <div class="left">
+            <a class="white" href=""><i class="fas fa-random"></i></a>
+            <a class="white" href=""><i class="fas fa-step-backward"></i></a>
+          </div>
           <a class="white play" href=""><i class="far fa-play-circle"></i></a>
-          <a class="white" href=""><i class="fas fa-step-forward"></i></a>
-          <a class="white" href=""><i class="fas fa-redo-alt"></i></a>
+          <div class="right">
+            <a class="white" href=""><i class="fas fa-step-forward"></i></a>
+            <a class="white" href=""><i class="fas fa-redo-alt"></i></a>
+          </div>
         </div>
         <div class="duration white">
           <span>0.25</span>
-          <input type="range" min="1" max="100" value="20">
+          <!-- <input type="range" min="1" max="100" value="20"> -->
+          <div class="bar">
+            <div class="bar-left"></div>
+            <div class="bar-right"></div>
+            <div class="ball"></div>
+          </div>
           <span>4.35</span>
         </div>
       </div>
@@ -264,7 +273,12 @@
         <a class="white" href=""><i class="fas fa-desktop"></i></a>
         <a class="white" href=""><i class="fas fa-volume-up"></i></a>
         <div class="range">
-          <input type="range" min="1" max="100" value="20">
+          <!-- <input type="range" min="1" max="100" value="20"> -->
+          <div class="bar">
+            <div class="bar-left"></div>
+            <div class="bar-right"></div>
+            <div class="ball"></div>
+          </div>
         </div>
       </div>
 
